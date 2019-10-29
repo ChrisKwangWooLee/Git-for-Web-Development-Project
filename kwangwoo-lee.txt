@@ -1,0 +1,163 @@
+Chris Kwang Woo Lee - Git for Web Development Project
+
+https://codepen.io/kl467/pen/gOOGaGY
+
+
+1. What is Semantic HTML? 
+    Semantic HTML provides meaning to HTML.
+
+2. What is HTML used for? 
+    HTML provides structure to a website.
+
+3. What is an attribute and where do we put it? 
+    Attribute allows us to store value as a property of a tag. Attribute should be included within the opening tag.
+
+4. What is the h1 tag used for? How many times should I use it on a page?
+    h1 is used to denote the most important heading (ex. title of the page) You should use it only once.
+    (there's also title tag, which it's used for the tabs)
+
+5. Name two tags that have required attributes
+    <img src="#">, <a href="#"></a>
+
+6. What do we put in the head of our HTML document?
+    Metadata. Things that are not directly displayed on the page but still affecting the page. (ex. link to css)
+
+7. What is an id?
+    It is an attribute you can provide to a single element. It's the most specific way to select an element.
+
+8. What elements can I add an id to?
+    Any element.
+
+9. How many times can I use the same id on a page? 
+    id of some value can be only used once.
+
+10. What is a class? 
+    It is an attribute you can provide to a multiple element. It is less specific than ID. 
+
+11. What elements can I add a class to?
+    Any element.
+
+12. How many times can I use the same class on a page?
+    As much as you need.
+
+13. How do I get my link to open in a new tab?
+    You would need to provide target="_blank" attribute within an anchor tag.
+    ex.  <a href="abc@email.com" target="_blank">Email</a>
+
+14. What is the alt attribute used for?
+    Alt attribute allows elements, such as images, to be rendered as a text. Text reader, used by disabled people, and SEO depends on this functionality.
+
+15. How do I reference an id?
+    #id_value
+
+16. What is the difference between a section and a div
+    Section is a semantic html tag, whereas div is a non-semantic html tag(provides no meaning)
+
+17. What is CSS used for? 
+    To style a webpage.
+
+18. How to we select an element? Example - every h2 on the page
+    h2 {
+        color: black;
+    }
+
+19. What is the difference between a class and an id? - Give me an example of when I might use each one
+    You can select multiuple elements with a class, while you can only select one element with an id.
+    I would use class if I want to change color of texts of a few paragraphs.
+    I would use id if I want to link a specific section of my webpage (within the same page) to an anchor tag.
+
+20. How do we select classes in CSS?
+    .selectClass {
+        color: black;
+    }
+
+21. How do we select a p element with a single class of “human””?
+    p.human {
+        color: black;
+    }
+
+22. What is a parent child selector? When would this be useful? 
+    Descendant selector allows us to select child of a parent element (as so forth). It allows us to be more specific than simply using an element selector.
+
+23. How do you select all links within a div with the class of sidebar?
+    div.sidebar a {
+
+    }
+
+24. What is a pseudo selector?
+    According to W3School, pseudo selector is used to define a special state(ex. hover) of an element.
+
+25. What do we use the change the spacing between lines?
+    line-height: 30px;
+
+26. What do we use to change the spacing between letters?
+    letter-spacing: 2px;
+
+27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?
+    text-transform: uppercase;
+    text-transform: lowercase;
+    text-transform: capitalize;
+
+28. How do I add a 1px border around my div that is dotted and black?
+    div {
+        border: 1px dotted black;
+    }
+
+29. How do I select everything on the page? 
+    * {
+        
+    }
+
+30. How do I write a comment in CSS?
+    /* This is a comment */
+
+31. How do I find out what file I am in, when I am using the command line? 
+    pwd
+
+32. Using the command line - how do I see a list of files/folders in my current folder?
+    li
+33. How do I remove a file via the command line? Why do I have to be careful with this? 
+    rm file_name.txt 
+    You cannot un-do deletion using command line. Also, there's no warning. 
+
+34. Why should I use version control?
+    It allows us to tack every changes we make to a code and make it easier to collaborate with others.
+
+35. How often should I commit to github?
+    Every 20 minutes.
+
+36. What is the command we would use to push our repo up to github? 
+    git push
+
+37. Walk me through Lambda's git flow. 
+    1. Fork repo (copying repo from other people)
+    2. Add PM as a collaborator (or team members later on)
+    3. Clone Repository with HTTPS (bring repo from github to local directory)
+    4. Create a new branch, naming it 'firstName-lastName'
+    5. Work on the code.
+    6. git add . 
+    7. git commit -m "message" 
+    8. git push -u origin firstName-lastName
+    9. Submit a Pull Request 
+
+
+Stretch Questions
+
+1. What is the difference between an inline element and a block element?
+    Block element take up the full width of the web page and CAN use height and width properties.
+    Inline element take up just the amount of space needed to disply the content and CANNOT use height and width properties.
+
+2. What happens when an element is positioned absolutely? 
+    If an element is positioned absolutely, it will ignore block elements and position itself relative to the parent container.
+
+3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width?
+    display: inline-block
+
+4. Name 3 elements that are display block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
+    block: <p>, <div>, <h1>
+    inline: <a>, <span>
+    inline-block: <img>
+
+5. In your own words, explain the box model. What is the fix for the box model?
+    Box model is how we, as a web developer, could think of each element. Each element is composed of a content, surrounded by padding, border, and margin.
+    Not entirely sure what's meant by "fix for the box model," but cross-browser compatability issue can be resolved with Eric Meyer's CSS reset.
